@@ -1,0 +1,73 @@
+project:
+  type: website
+
+website:
+  title: "La carrera de Cristiano Ronaldo"
+  # site-url: https://....      
+  # repo-url: https://....
+  # repo-actions: [edit, issue]
+  search:   
+    location: navbar
+    type: overlay   
+    copy-button: true
+  navbar: 
+    background: "blue"
+    foreground: "white"   
+    left: 
+      - icon: house-door
+        href: index.html
+    right:
+      - text: "Trabajo individual"   #---
+        href: blog.html
+      - icon: github
+        href: https://github.com/perezjm11    #---
+      - icon: envelope
+        url: "mailto:<jomape4@alumni.uv.es>"            #---
+  page-footer:
+    border: true
+    background: "blue"
+    left: "© 2023 José Mª Pérez Marco"   #----
+    center: "Hecho con [Quarto](https://quarto.org)"
+    right:
+      - icon: github
+        href: https://github.com/perezjm11   #----
+      - icon: envelope
+        url: "mailto:<jomape4>@alumni.uv.es"            #-----
+    
+format:
+  html:
+    theme: united           #---
+    highlight-style: a11y   #---
+    css: styles.css   
+    page-layout: full
+    toc: true
+    code-copy: true
+    code-overflow: wrap    #- {wrap, scroll}
+    code-fold: show
+    code-line-numbers: true
+    
+
+# Enable CC licence appendix
+license: "CC BY"
+
+lang: es   #- {es, en}
+
+
+# Default execute options
+execute:
+  echo: true
+  message: false
+  warning: false
+  eval: true
+
+#- Default knitr options
+knitr:
+  opts_chunk: 
+    collapse: true
+    comment: "#>" 
+    fig.asp:  7/9
+    out.width: "95%"
+    fig.align: "center"
+    fig.show: "hold"
+    R.options:
+      options(scipen = 999) #- para quitar la notación científica
